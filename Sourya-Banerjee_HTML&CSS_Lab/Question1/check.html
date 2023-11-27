@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+.container nav {
+  width: 100%;
+  height: 75px;
+  background: #444759;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  width: 20%;
+  float: left;
+  text-align: center;
+  padding: 24px 15px;
+  color: #eee;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+
+  position: relative;
+}
+
+nav ul li:hover {
+  color: #ea3b50;
+  box-shadow: inset 0 5px #ea3b50;
+}
+
+/* sub-menu */
+
+nav ul li ul.sub-nav {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background: #444759;
+  border-top: 1px solid #3d3f50;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.14), -1px 0px 1px rgba(0, 0, 0, 0.14);
+  visibility: hidden;
+  opacity: 0;
+}
+
+nav ul li ul.sub-nav li {
+  color: #eee;
+  font-size: 14px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+nav ul li ul.sub-nav li:hover {
+  color: #ea3b50;
+  box-shadow: 0 0;
+}
+
+nav ul li:hover ul.sub-nav {
+  visibility: visible;
+  opacity: 1;
+}
+.heads{
+width:100%;
+height:100px;
+background-color:yellow;
+}
+</style>
+</head>
+<body>
+<div>
+<div class="heads">header</div>
+<div class="container">
+  <nav>
+    <ul>
+      <li>link 1</li>
+      <li>link 2
+        <ul class="sub-nav">
+          <li>DD_link_1</li>
+          <li>DD_link_2</li>
+          <li>DD_link_3</li>
+        </ul>
+      </li>      
+      <li>link 3
+        <ul class="sub-nav">
+          <li>DD_link_1</li>
+          <li>DD_link_2</li>
+          <li>DD_link_3</li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div></div>
+</body>
+</html>
